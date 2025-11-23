@@ -113,4 +113,5 @@ export default defineConfig({
 	],
 	treeshake: true,
 	clean: true,
+	sourcemap: true,
 });

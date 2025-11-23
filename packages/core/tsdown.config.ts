@@ -17,4 +17,5 @@ export default defineConfig({
 		"./src/error/index.ts",
 	],
 	clean: true,
+	sourcemap: true,
 });

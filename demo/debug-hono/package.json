@@ -1,0 +1,25 @@
+{
+  "name": "better-auth-debug-hono",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --enable-source-maps dist/index.js"
+  },
+  "dependencies": {
+    "better-auth": "workspace:*",
+    "@better-auth/core": "workspace:*",
+    "hono": "^4.9.7",
+    "@hono/node-server": "^1.19.6",
+    "better-sqlite3": "^12.2.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.4.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2"
+  }
+}
+
