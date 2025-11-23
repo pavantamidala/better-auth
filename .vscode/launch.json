@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hono: Debug Server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "tsx",
+      "runtimeArgs": ["watch", "src/index.ts"],
+      "cwd": "${workspaceFolder}/debug-hono",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/packages/better-auth/dist/**/*.js",
+        "${workspaceFolder}/packages/core/dist/**/*.js",
+        "${workspaceFolder}/debug-hono/dist/**/*.js"
+      ],
+      "env": {
+        "NODE_OPTIONS": "--enable-source-maps --loader tsx/esm"
+      },
+      "smartStep": true,
+      "stopOnEntry": false
+    },
+    {
+      "name": "Hono: Debug Server (Attach)",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/packages/better-auth/dist/**/*.js",
+        "${workspaceFolder}/packages/core/dist/**/*.js",
+        "${workspaceFolder}/debug-hono/dist/**/*.js"
+      ]
+    }
+  ]
+}
+
+

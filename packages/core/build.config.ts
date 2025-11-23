@@ -3,11 +3,15 @@ import { defineBuildConfig } from "unbuild";
 export default defineBuildConfig({
 	rollup: {
 		emitCJS: true,
+		esbuild: {
+			sourcemap: true,
+		},
 	},
 	declaration: true,
 	outDir: "dist",
 	clean: true,
 	failOnWarn: false,
+	sourcemap: true,
 	entries: [
 		"./src/index.ts",
 		"./src/db/index.ts",

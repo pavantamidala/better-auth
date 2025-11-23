@@ -5,12 +5,14 @@ export default defineBuildConfig({
 		emitCJS: true,
 		esbuild: {
 			treeShaking: true,
+			sourcemap: true,
 		},
 	},
 	declaration: true,
 	outDir: "dist",
 	clean: true,
 	failOnWarn: false,
+	sourcemap: true,
 	externals: [
 		"prisma",
 		"@prisma/client",
